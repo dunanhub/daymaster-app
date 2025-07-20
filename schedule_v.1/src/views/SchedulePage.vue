@@ -136,7 +136,7 @@ const processScheduleData = (rawHeaders, rawRows) => {
 
 onMounted(async () => {
   try {
-    const res = await fetch('/src/assets/schedule.csv')
+    const res = await fetch('/schedule.csv')
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }

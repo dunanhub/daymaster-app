@@ -95,7 +95,7 @@ const CUP_VOLUME_LITERS = 0.25; // Объем одной чашки в литр�
 // --- Загрузка данных ---
 const loadSchedule = async () => {
   try {
-    const res = await fetch('/src/assets/schedule.csv');
+    const res = await fetch('/schedule.csv');
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const text = await res.text();
     const parsed = Papa.parse(text, { skipEmptyLines: true });
@@ -117,7 +117,7 @@ const loadSchedule = async () => {
 
 const loadFoods = async () => {
   try {
-    const res = await fetch('/src/assets/foods.csv');
+    const res = await fetch('/foods.csv');
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const text = await res.text();
     const parsed = Papa.parse(text, { skipEmptyLines: true });
