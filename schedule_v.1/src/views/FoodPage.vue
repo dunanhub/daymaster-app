@@ -257,7 +257,7 @@ onMounted(async () => {
 
   // Загрузка cookingMethods.csv
   try {
-    const res = await fetch('/src/assets/cookingMethods.csv')
+    const res = await fetch('/daymaster-app/cookingMethods.csv')
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status} for cookingMethods.csv`);
     const text = await res.text()
     const parsed = Papa.parse(text, { skipEmptyLines: true })
@@ -274,7 +274,7 @@ onMounted(async () => {
 
   // Загрузка BuyLists.csv
   try {
-    const res = await fetch('/src/assets/BuyLists.csv')
+    const res = await fetch('/daymaster-app/BuyLists.csv')
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status} for BuyLists.csv`);
     const text = await res.text()
     const parsed = Papa.parse(text, { skipEmptyLines: true })
