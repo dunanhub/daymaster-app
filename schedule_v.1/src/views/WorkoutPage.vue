@@ -142,7 +142,7 @@ const processWorkoutData = (rawHeaders, rawRows) => {
 
 onMounted(async () => {
   try {
-    const res = await fetch('/WorkOut.csv') // Изменено на WorkOut.csv
+    const res = await fetch('/daymaster-app/WorkOut.csv') // Изменено на WorkOut.csv
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }

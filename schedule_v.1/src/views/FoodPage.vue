@@ -239,7 +239,7 @@ const processBuyList = (rawHeaders, rawRows) => {
 onMounted(async () => {
   // Загрузка foods.csv
   try {
-    const res = await fetch('/foods.csv')
+    const res = await fetch('/daymaster-app/foods.csv')
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status} for foods.csv`);
     const text = await res.text()
     const parsed = Papa.parse(text, { skipEmptyLines: true })

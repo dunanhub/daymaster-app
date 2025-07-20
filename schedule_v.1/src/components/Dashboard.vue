@@ -117,7 +117,7 @@ const loadSchedule = async () => {
 
 const loadFoods = async () => {
   try {
-    const res = await fetch('/foods.csv');
+    const res = await fetch('/daymaster-app/foods.csv');
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const text = await res.text();
     const parsed = Papa.parse(text, { skipEmptyLines: true });
